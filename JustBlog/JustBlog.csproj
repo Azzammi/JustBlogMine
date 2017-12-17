@@ -182,7 +182,6 @@
     <Content Include="Views\List.cshtml" />
     <Content Include="Views\Shared\_PostTemplate.cshtml" />
     <Content Include="Views\Shared\_PostTemplate2.cshtml" />
-    <Content Include="App_Code\Helpers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
