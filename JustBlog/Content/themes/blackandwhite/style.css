@@ -75,17 +75,17 @@ ol li
 
 #main
 { width: 910px;
-  background: url(content.png) repeat-y;}
+  background: url(images/content.png) repeat-y;}
 
 #header
 { width: 890px;
-  background: url(back.png) repeat-x;}
+  background: url(images/back.png) repeat-x;}
 
 #logo
 { width: 890px;
   position: relative;
   height: 200px;
-  background: url(logo.jpg) no-repeat;}
+  background: url(images/logo.jpg) no-repeat;}
 
 #logo #logo_text 
 { position: absolute; 
@@ -178,7 +178,7 @@ ul#menu li a:hover
 .sidebar li a, .sidebar li a:hover
 { padding: 0 0 0 40px;
   display: block;
-  background: transparent url(link.png) no-repeat left center;} 
+  background: transparent url(images/link.png) no-repeat left center;} 
 
 .sidebar li a.selected
 { color: #444;
@@ -195,7 +195,7 @@ ul#menu li a:hover
 
 #content ul li
 { list-style-type: none;
-  background: url(bullet.png) no-repeat;
+  background: url(images/bullet.png) no-repeat;
   margin: 0 0 6px 0; 
   padding: 0 0 4px 25px;
   line-height: 1.5em;}

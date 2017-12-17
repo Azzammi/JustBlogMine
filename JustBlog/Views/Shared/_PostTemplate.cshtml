@@ -1,5 +1,6 @@
 ﻿@model JustBlog.Core.Objects.Post
 
+
 <div class="post">
     <div class="post-meta">
         <div class="row">
@@ -28,7 +29,23 @@
             </div>
         </div>
     </div>
+
+    <!-- Short Description -->
+    <div class="post-body">
+        @Html.Raw(Model.ShortDescription)
+    </div>
+
+    <div class="post-foot">
+        @Html.ActionLink("Continue ...", "post", "blog",
+            new
+            {
+                year = Model.PostedOn.Year,
+                month = Model.PostedOn.Month,
+                day = Model.PostedOn.Day,
+                title = Model.UrlSlug
+            },
+            new { title = "continue..."}
+       )
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+

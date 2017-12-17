@@ -26,7 +26,7 @@ namespace JustBlog.Core.Repository
                          //Specifying the assembly where the domain & mapping classes exists (mappings)
                          .Mappings(m => m.FluentMappings.AddFromAssemblyOf<Post>())
                          //Ask NHibernate to create tables from te classes (Expose Configuration)
-                         .ExposeConfiguration(cfg => new SchemaExport(cfg).Execute(true, true, false))
+                         //.ExposeConfiguration(cfg => new SchemaExport(cfg).Execute(true, true, false))
                          .BuildConfiguration()
                          .BuildSessionFactory()
                 )

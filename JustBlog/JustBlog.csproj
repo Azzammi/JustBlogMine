@@ -161,7 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionLinkExtensions.cs" />
-    <Compile Include="App_Start\MvcApplication.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Extensions.cs" />
@@ -179,9 +178,10 @@
     </Content>
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\List.cshtml" />
+    <Content Include="Views\Blog\List.cshtml" />
     <Content Include="Views\Shared\_PostTemplate.cshtml" />
-    <Content Include="Views\Shared\_PostTemplate2.cshtml" />
+    <Content Include="App_Code\Helpers.cshtml" />
+    <Content Include="Views\Shared\_Pager.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -191,7 +191,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JustBlog.Core\JustBlog.Core.csproj">

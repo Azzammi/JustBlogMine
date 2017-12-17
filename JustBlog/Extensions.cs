@@ -1,7 +1,5 @@
 ﻿using System;
-using JustBlog.Core.Objects;
 using System.Configuration;
-using System.Web.Mvc;
 
 namespace JustBlog
 {

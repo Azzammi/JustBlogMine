@@ -2,7 +2,6 @@
 using JustBlog.Core.Objects;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
-using System.Linq;
 
 namespace JustBlog
 {
