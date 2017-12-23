@@ -14,9 +14,27 @@ namespace JustBlog
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
+                name: "Action",
+                url: "{action}",
                 defaults: new { controller = "Blog", action = "Posts", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Category",
+                url: "Category/{category}",
+                defaults: new { controller = "Blog", action = "Category" }
+            );
+
+            routes.MapRoute(
+                name: "Tag",
+                url: "Tag/{tag}",
+                defaults: new { controller = "Blog", action = "Tag"}
+            );
+
+            routes.MapRoute(
+                name: "Post",
+                url: "Archive/{year}/{month}/{title}",
+                defaults: new { controller = "Blog", action = "Post" }
             );
         }
     }

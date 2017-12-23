@@ -31,9 +31,14 @@
 
         </div>
 
-
         <!-- Site Content -->
         <div id="site_content">
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                @Html.Partial("_Search")
+            </div>
+            
             @RenderBody()
         </div>
 
@@ -42,5 +47,8 @@
             Copyright &copy; @DateTime.Now.Year JustBlog Luthfi All Rights Reserved
         </div>
     </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+    <script src="@Url.Content("~/Scripts/app.js")"></script>
 </body>
 </html>

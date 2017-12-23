@@ -32,7 +32,7 @@
 
     <!-- Pagination links -->
     <div class="pager">
-        <a href="@p" title="Previous" class="previous" style="visibility:@(currentPage > 1 ? "visible" : "collapse")"><< previouse</a>
-        <a href="@n" title="Next" class="Next" style="visibility:@(currentPage > 1 ? "visible" : "collapse")">next >></a>
+        <a href="@p" title="Previous" class="previous" style="visibility:@(currentPage > 1 ? "visible" : "collapse")">previouse</a>
+        <a href="@n" title="Next" class="Next" style="visibility:@(currentPage < totalPages ? "visible" : "collapse")">next</a>
     </div>
 }

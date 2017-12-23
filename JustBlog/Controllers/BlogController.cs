@@ -33,5 +33,49 @@ namespace JustBlog.Controllers
             ViewBag.Title = "Latest Posts";
             return View("List", viewModel);
         }
+
+        public ViewResult Post(int year, int month, string title)
+        {
+            var post = _blogRepository.Post(year, month, title);
+
+            if (post == null)
+                throw new HttpException(404, "Post Not Found");
+            if (post.Published == false && User.Identity.IsAuthenticated == false)
+                throw new HttpException(401, "The post is not published");
+
+            return View(post);
+        }
+
+        public ViewResult Category(string category, int p = 1)
+        {
+            var viewModel = new ListViewModel(_blogRepository, category, "category", p);
+
+            if (viewModel.Category == null)
+                throw new HttpException(404, "Category not found");
+
+            ViewBag.Title = String.Format(@"Latests posts on category ""{0}""",
+                            viewModel.Category.Name);
+            return View("List", viewModel);
+        }
+        
+        public ViewResult Tag(string tag, int p = 1)
+        {
+            var viewModel = new ListViewModel(_blogRepository, tag, "Tag", p);
+
+            if (viewModel.Tag == null)
+                throw new HttpException(404, "Tag Not Found");
+
+            ViewBag.Title = String.Format(@"Latests posts tagged on ""{0}""",
+                viewModel.Tag.Name);
+            return View("List", viewModel);
+        }
+
+        public ViewResult Search(string s, int p = 1)
+        {
+            ViewBag.Title = String.Format(@"Lists of posts found for search text ""{0}""", s);
+
+            var viewModel = new ListViewModel(_blogRepository, s, "Search", p);
+            return View("List", viewModel);
+        }
     }
 }
