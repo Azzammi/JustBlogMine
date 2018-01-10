@@ -4,10 +4,13 @@
     FormMethod.Get,             //method
     new { id = "search-form" })) // html attributes
 {
+<div class="sidebar">
     <h3>Search</h3>
     <p>
-        @Html.TextBox("s",null, new { @class = "search" })
+        @Html.TextBox("s", null, new { @class = "search" })
         <!-- <input value="Search" type="submit" /> -->
         <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src=@Url.Content("~/Content/themes/blackandwhite/images/search.png") alt="Search" title="Search" />
-    </p>   
+    </p>  
+</div>
+    
 }

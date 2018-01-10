@@ -163,5 +163,12 @@ namespace JustBlog.Core.Repository
             return _session.Query<Category>().OrderBy(p => p.Name).ToList();
         }
         #endregion
+
+        #region Display The Tag Widget
+        public IList<Tag> Tags()
+        {
+            return _session.Query<Tag>().OrderBy(p => p.Name).ToList();
+        }
+        #endregion
     }
 }

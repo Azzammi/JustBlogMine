@@ -48,7 +48,7 @@ namespace JustBlog.Controllers
 
         public ViewResult Category(string category, int p = 1)
         {
-            var viewModel = new ListViewModel(_blogRepository, category, "category", p);
+            var viewModel = new ListViewModel(_blogRepository, category, "Category", p);
 
             if (viewModel.Category == null)
                 throw new HttpException(404, "Category not found");
@@ -76,6 +76,13 @@ namespace JustBlog.Controllers
 
             var viewModel = new ListViewModel(_blogRepository, s, "Search", p);
             return View("List", viewModel);
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult Sidebars()
+        {
+            var widgetViewModel = new WidgetViewModel(_blogRepository);
+            return PartialView("_Sidebars", widgetViewModel);
         }
     }
 }

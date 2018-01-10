@@ -29,5 +29,8 @@ namespace JustBlog.Core.API
 
         //Display the Category widget
         IList<Category> Categories();
+
+        //Displat the TAG widget
+        IList<Tag> Tags();
     }
 }

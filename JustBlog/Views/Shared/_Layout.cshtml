@@ -32,14 +32,13 @@
         </div>
 
         <!-- Site Content -->
-        <div id="site_content">
+        <div id="site_content">                      
+            @Html.Partial("_search")
+            @RenderBody()
 
             <!-- Sidebar -->
-            <div class="sidebar">
-                @Html.Partial("_Search")
-            </div>
-            
-            @RenderBody()
+            @* Call the child action to render the sidebars*@'
+            @Html.Action("Sidebars")
         </div>
 
         <!-- Footer -->
