@@ -3,11 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustBlog", "JustBlog\JustBlog.csproj", "{40C075BA-B269-409A-B12D-E6375AF1B327}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustBlog", "src\JustBlog\JustBlog.csproj", "{40C075BA-B269-409A-B12D-E6375AF1B327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustBlog.Tests", "JustBlog.Tests\JustBlog.Tests.csproj", "{F8593E15-D905-4FF3-BFCC-77D339A9B346}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustBlog.Core", "src\JustBlog.Core\JustBlog.Core.csproj", "{81439E4E-47B0-4A78-BF3E-B6B96F86B5DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustBlog.Core", "JustBlog.Core\JustBlog.Core.csproj", "{81439E4E-47B0-4A78-BF3E-B6B96F86B5DD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Item", "Solution Item", "{A5EDA332-B720-45EA-84FD-20F3FA5A5350}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		nuget.config = nuget.config
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustBlog.Test", "test\JustBlog.Test\JustBlog.Test.csproj", "{FCD5C4EF-78DD-4AF4-BC3F-29BF3185D97E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +26,14 @@ Global
 		{40C075BA-B269-409A-B12D-E6375AF1B327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40C075BA-B269-409A-B12D-E6375AF1B327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40C075BA-B269-409A-B12D-E6375AF1B327}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8593E15-D905-4FF3-BFCC-77D339A9B346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8593E15-D905-4FF3-BFCC-77D339A9B346}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8593E15-D905-4FF3-BFCC-77D339A9B346}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8593E15-D905-4FF3-BFCC-77D339A9B346}.Release|Any CPU.Build.0 = Release|Any CPU
 		{81439E4E-47B0-4A78-BF3E-B6B96F86B5DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{81439E4E-47B0-4A78-BF3E-B6B96F86B5DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81439E4E-47B0-4A78-BF3E-B6B96F86B5DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81439E4E-47B0-4A78-BF3E-B6B96F86B5DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD5C4EF-78DD-4AF4-BC3F-29BF3185D97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD5C4EF-78DD-4AF4-BC3F-29BF3185D97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD5C4EF-78DD-4AF4-BC3F-29BF3185D97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD5C4EF-78DD-4AF4-BC3F-29BF3185D97E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

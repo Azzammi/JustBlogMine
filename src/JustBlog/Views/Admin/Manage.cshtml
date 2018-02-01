@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Manage</title>
+
+    <!-- jquery ui library -->
+    <link href="@Url.Content("~/Content/themes/blackandwhite/jquery-ui-1.9.2.custom/css/sunny/jquery-ui-1.9.2.custom.min.css")" rel="stylesheet" />
+
+    <!-- jqgrid -->
+    <link href="@Url.Content("~/Scripts/jquery.jqGrid-4.4.2/css/ui.jqgrid.css")" rel="stylesheet" />       
+
+    <!-- Custom CSS -->
+    <link href="@Url.Content("~/Content/themes/simple/admin.css")" rel="stylesheet" />    
+</head>
+<body>
+    <!-- Logout link -->
+    <div style="text-align:right; margin-bottom:5px;"> 
+        @Html.ActionLink("logout","Logout")
+    </div>
+
+    <h2>Manage Posts, Categories and Tags</h2>
+
+    <!-- Tab Control -->
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab-posts">Posts</a></li>
+            <li><a href="#tab-cats">Categories</a></li>
+            <li><a href="#tab-tags">Tags</a></li>
+        </ul>
+
+        <div id="tab-posts" class="tab">
+            <table id="tableCats" class="grid">
+
+            </table>
+            <div id="pagerCats" class="pager"></div>
+        </div>
+        <div id="tab-cats" class="tab">
+            <table id="tableCats" class="grid"></table>
+            <div id="pagerCats" class="pager">
+            </div>
+        </div>
+        <div id="tab-tags" class="tab">
+            <table id="tableTags" class="grid"></table>
+            <div id="pagerTags" class="pager">
+            </div>
+        </div>
+    </div>
+
+    <!-- The Script Is Loaded last for performance at loading the page -->
+    <!-- jquery library -->
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+
+    <!-- jquery ui library -->
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+
+    <!-- jqgrid -->
+    <script src="@Url.Content("~/Scripts/jquery.jqGrid-4.4.2/js/jquery.jqGrid.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.jqGrid-4.4.2/js/i18n/grid.locale-en.js")"></script>
+
+    <!-- tinyMCE -->
+    <script src="@Url.Content("~/Scripts/tiny_mce/tiny_mce.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/admin.js")"></script>
+</body>
+</html>
